@@ -1,0 +1,4 @@
+[19-Sep-2015 08:09:48 UTC] PHP Fatal error:  Class 'YIT_Submenu_Tabs_Abstract' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/yit/Submenu/Tabs/Splash/Custom_Splash_Logo.php on line 20
+[19-Sep-2015 08:09:48 UTC] PHP Fatal error:  Class 'YIT_Submenu_Tabs_Abstract' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/yit/Submenu/Tabs/Splash/Custom_Splash_General.php on line 20
+[19-Sep-2015 08:09:48 UTC] PHP Fatal error:  Class 'YIT_Submenu_Tabs_Abstract' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/yit/Submenu/Tabs/Splash/Custom_Splash_Container.php on line 20
+[19-Sep-2015 08:09:48 UTC] PHP Fatal error:  Class 'YIT_Submenu_Tabs_Abstract' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/yit/Submenu/Tabs/Splash/Custom_Splash_Background.php on line 20

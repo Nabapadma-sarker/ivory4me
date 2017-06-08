@@ -1,0 +1,8 @@
+[19-Sep-2015 08:07:13 UTC] PHP Fatal error:  Call to undefined function get_permalink() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/quote.php on line 18
+[19-Sep-2015 08:07:13 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/audio.php on line 24
+[19-Sep-2015 08:07:13 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/video.php on line 24
+[19-Sep-2015 08:07:13 UTC] PHP Fatal error:  Call to undefined function get_posts() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/gallery.php on line 20
+[24-Mar-2016 06:24:42 UTC] PHP Fatal error:  Call to undefined function get_permalink() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/quote.php on line 18
+[24-Mar-2016 06:24:42 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/audio.php on line 24
+[24-Mar-2016 06:24:42 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/video.php on line 24
+[24-Mar-2016 06:24:42 UTC] PHP Fatal error:  Call to undefined function get_posts() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/post-formats/gallery.php on line 20

@@ -1,0 +1,4 @@
+[19-Sep-2015 07:36:26 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/splash/custom-splash-container.php on line 19
+[19-Sep-2015 07:36:26 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/splash/custom-splash-background.php on line 18
+[24-Mar-2016 06:16:23 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/splash/custom-splash-container.php on line 19
+[24-Mar-2016 06:16:23 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/splash/custom-splash-background.php on line 18

@@ -1,0 +1,22 @@
+.popupWrap .submit-field, .popupWrap .input-prepend > .submit-field  {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: 11px;
+    font-family: "noticia text", sans-serif;
+    font-weight: bold;
+}
+
+.popupWrap .input-prepend {border: 1px solid #1f1f1f; background-color: #ffffff;}
+
+.popupWrap .input-prepend:hover, .popupWrap .submit-field:hover, .popupWrap .input-prepend:hover > .submit-field, .popupWrap .input-prepend:hover > .add-on i{
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.popupWrap .input-prepend > .add-on i{color: #000000;}
+
+.popupWrap .input-prepend{width:220px;}
+
+.popupWrap .submit-field{width: 195px;}
+

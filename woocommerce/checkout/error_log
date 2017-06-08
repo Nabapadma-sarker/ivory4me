@@ -1,0 +1,10 @@
+[19-Sep-2015 06:53:15 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-checkout.php on line 17
+[19-Sep-2015 06:53:15 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-payment.php on line 20
+[19-Sep-2015 06:53:15 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-place-order.php on line 5
+[19-Sep-2015 06:53:15 UTC] PHP Fatal error:  Call to a member function checkout() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-checkout-multistep.php on line 17
+[19-Sep-2015 06:53:15 UTC] PHP Fatal error:  Call to a member function checkout() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-checkout-classic.php on line 10
+[24-Mar-2016 06:03:18 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-payment.php on line 20
+[24-Mar-2016 06:03:18 UTC] PHP Fatal error:  Call to a member function checkout() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-checkout-multistep.php on line 17
+[24-Mar-2016 06:03:18 UTC] PHP Fatal error:  Call to a member function checkout() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-checkout-classic.php on line 10
+[24-Mar-2016 06:03:19 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-checkout.php on line 17
+[24-Mar-2016 06:03:22 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/checkout/form-place-order.php on line 5

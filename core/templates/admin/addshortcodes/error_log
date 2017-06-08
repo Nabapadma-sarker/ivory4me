@@ -1,0 +1,6 @@
+[19-Sep-2015 08:04:47 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/addshortcodes/code.php on line 2
+[19-Sep-2015 08:04:47 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/addshortcodes/select.php on line 6
+[19-Sep-2015 08:04:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/addshortcodes/checklist.php on line 4
+[24-Mar-2016 06:24:30 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/addshortcodes/code.php on line 2
+[24-Mar-2016 06:24:31 UTC] PHP Fatal error:  Call to undefined function _e() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/addshortcodes/select.php on line 6
+[24-Mar-2016 06:24:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/addshortcodes/checklist.php on line 4

@@ -1,0 +1,6 @@
+[19-Sep-2015 08:04:46 UTC] PHP Fatal error:  Class 'Walker_Nav_Menu' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/lib/yit/Walker/Walker_Nav_Menu.php on line 22
+[19-Sep-2015 08:04:46 UTC] PHP Fatal error:  Class 'Walker_Nav_Menu_Edit' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/lib/yit/Walker/Walker_Nav_Menu_Edit.php on line 21
+[19-Sep-2015 08:04:46 UTC] PHP Fatal error:  Class 'Walker_Nav_Menu' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/lib/yit/Walker/Walker_Top_Menu.php on line 22
+[24-Mar-2016 06:24:41 UTC] PHP Fatal error:  Class 'Walker_Nav_Menu' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/lib/yit/Walker/Walker_Top_Menu.php on line 22
+[24-Mar-2016 06:24:41 UTC] PHP Fatal error:  Class 'Walker_Nav_Menu' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/lib/yit/Walker/Walker_Nav_Menu.php on line 22
+[24-Mar-2016 06:24:41 UTC] PHP Fatal error:  Class 'Walker_Nav_Menu_Edit' not found in /home/sshats1974/public_html/wp-content/themes/boemia/core/lib/yit/Walker/Walker_Nav_Menu_Edit.php on line 21

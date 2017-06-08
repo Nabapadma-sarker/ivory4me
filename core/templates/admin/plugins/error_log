@@ -1,0 +1,2 @@
+[19-Sep-2015 08:04:46 UTC] PHP Fatal error:  Call to undefined function admin_url() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/plugins/instructions.php on line 29
+[24-Mar-2016 06:24:30 UTC] PHP Fatal error:  Call to undefined function admin_url() in /home/sshats1974/public_html/wp-content/themes/boemia/core/templates/admin/plugins/instructions.php on line 29

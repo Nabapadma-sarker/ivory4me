@@ -1,0 +1,6 @@
+[19-Sep-2015 07:36:25 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/maintenance/maintenance-newsletter.php on line 22
+[19-Sep-2015 07:36:25 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/maintenance/maintenance-logo.php on line 18
+[19-Sep-2015 07:36:25 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/maintenance/maintenance-background.php on line 18
+[24-Mar-2016 06:16:23 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/maintenance/maintenance-logo.php on line 18
+[24-Mar-2016 06:16:24 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/maintenance/maintenance-background.php on line 18
+[24-Mar-2016 06:16:24 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/maintenance/maintenance-newsletter.php on line 22

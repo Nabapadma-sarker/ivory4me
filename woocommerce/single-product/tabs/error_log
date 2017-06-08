@@ -1,0 +1,16 @@
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/info.php on line 6
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function do_shortcode() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/custom.php on line 6
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function comments_open() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/reviews.php on line 8
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-info.php on line 10
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-custom.php on line 12
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/attributes.php on line 12
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function comments_open() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-reviews.php on line 10
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-attributes.php on line 12
+[24-Mar-2016 06:15:45 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/info.php on line 6
+[24-Mar-2016 06:15:46 UTC] PHP Fatal error:  Call to undefined function do_shortcode() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/custom.php on line 6
+[24-Mar-2016 06:15:46 UTC] PHP Fatal error:  Call to undefined function comments_open() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/reviews.php on line 8
+[24-Mar-2016 06:15:46 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-info.php on line 10
+[24-Mar-2016 06:15:46 UTC] PHP Fatal error:  Call to undefined function yit_get_post_meta() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-custom.php on line 12
+[24-Mar-2016 06:15:46 UTC] PHP Fatal error:  Call to undefined function get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/attributes.php on line 12
+[24-Mar-2016 06:15:46 UTC] PHP Fatal error:  Call to undefined function comments_open() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-reviews.php on line 10
+[24-Mar-2016 06:15:46 UTC] PHP Fatal error:  Call to undefined function get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs/tab-attributes.php on line 12

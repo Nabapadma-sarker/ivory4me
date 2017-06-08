@@ -1,0 +1,2 @@
+[19-Sep-2015 07:36:25 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/seo/settings-custom-post-types.php on line 46
+[24-Mar-2016 06:16:23 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/panel/seo/settings-custom-post-types.php on line 46

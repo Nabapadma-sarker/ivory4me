@@ -1,0 +1,2 @@
+[19-Sep-2015 06:55:14 UTC] PHP Fatal error:  Call to undefined function yit_is_accordion_empty() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/accordions/markup.php on line 8
+[24-Mar-2016 06:04:08 UTC] PHP Fatal error:  Call to undefined function yit_is_accordion_empty() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/accordions/markup.php on line 8

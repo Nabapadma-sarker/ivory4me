@@ -1,0 +1,2 @@
+[19-Sep-2015 06:55:19 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/maintenance/maintenance.php on line 17
+[24-Mar-2016 06:04:08 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/maintenance/maintenance.php on line 17

@@ -1,0 +1,6 @@
+[19-Sep-2015 06:55:13 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/loop/loop.php on line 18
+[19-Sep-2015 06:55:13 UTC] PHP Fatal error:  Call to undefined function wp_reset_query() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/loop/extra-content.php on line 19
+[19-Sep-2015 06:55:13 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/loop/archives.php on line 19
+[24-Mar-2016 06:04:10 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/loop/loop.php on line 18
+[24-Mar-2016 06:04:10 UTC] PHP Fatal error:  Call to undefined function yit_get_option() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/loop/archives.php on line 19
+[24-Mar-2016 06:04:10 UTC] PHP Fatal error:  Call to undefined function wp_reset_query() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/loop/extra-content.php on line 19

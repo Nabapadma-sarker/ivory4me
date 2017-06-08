@@ -1,0 +1,2 @@
+[19-Sep-2015 06:53:12 UTC] PHP Fatal error:  Call to undefined function apply_filters() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/loop/sorting.php on line 14
+[24-Mar-2016 06:01:08 UTC] PHP Fatal error:  Call to undefined function apply_filters() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/loop/sorting.php on line 14

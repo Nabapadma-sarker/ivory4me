@@ -1,0 +1,2 @@
+[19-Sep-2015 07:36:58 UTC] PHP Fatal error:  Call to undefined function has_post_thumbnail() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/markup.php on line 15
+[24-Mar-2016 06:16:24 UTC] PHP Fatal error:  Call to undefined function has_post_thumbnail() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/blog/small/markup.php on line 15

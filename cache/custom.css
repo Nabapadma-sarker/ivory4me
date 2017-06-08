@@ -1,0 +1,208 @@
+.slider-home-page-1.slider .dg-add-content-wrap .dg-image-title, .slider-home-page-1.slider .dg-add-content-wrap .dg-image-title a { font-size: 24px; font-family: 'Noticia Text', sans-serif; color: #ffffff; font-style: normal; font-weight: 400; }
+.slider-home-page-1.slider .dg-add-content-wrap .dg-image-description { font-size: 18px; font-family: 'Noticia Text', sans-serif; color: #ffffff; font-style: normal; font-weight: 400; }
+#maintenance_message { font-size: 15px; font-family: 'Play', sans-serif; color: #5b5b5b; font-style: normal; font-weight: 400; }
+#maintenance_newsletter .newsletter-section input.text-field, #maintenance_newsletter .newsletter-section label { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #949494; font-style: normal; font-weight: 400; }
+#maintenance_newsletter .newsletter-section input.submit-field { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #4c4c4c; font-style: normal; font-weight: 400; }
+#header-sidebar .widget_shopping_cart .cart_control { background-color: #484848; border-color: #474747; }
+#header-sidebar .widget_shopping_cart .cart_wrapper { background-color: #494949; }
+#header-sidebar .widget_shopping_cart .cart_wrapper .buttons .button { background-color: #393737; }
+#header-sidebar .widget_shopping_cart .cart_wrapper .buttons .button:hover { background-color: #302e2e; }
+span.onsale { background-color: #c16604; color: #ffffff; }
+ul.products li.product .product-actions a { background-color: #fff; }
+ul.products li.product .product-actions a:hover { background-color: #f5f4f2; }
+ul.products li.product .product-actions a.out_of_stock { background-color: #8e0404; background-color: rgba( 142, 4, 4, 0.69 ); }
+ul.products li.product.list a.read-more { background-color: #fff; color: #212223; }
+ul.products li.product.list a.read-more:hover { background-color: #1f1f1f; color: #ffffff; }
+.status-publish .button, .button[name="change_password"], table.my_account_orders .button, .woocommerce_message .button, .product .summary .single_add_to_cart_button, .cart .button, input.checkout-button.alt.button, .shipping-calculator-form .button, .multistep_step .button, #place_order.button, .yith-woo-ajax-navigation a.yith-wcan-reset-navigation.button, .summary a.add_to_wishlist { background-color: #fff; }
+.status-publish .button:hover, .button[name="change_password"]:hover, table.my_account_orders .button:hover, .woocommerce_message .button:hover, div.product form.cart .button:hover, #content div.product form.cart .button:hover, .cart .button:hover, input.checkout-button.alt.button:hover, .shipping-calculator-form .button:hover, .multistep_step .button:hover, #place_order.button:hover, .yith-woo-ajax-navigation a.yith-wcan-reset-navigation.button:hover, .summary a.add_to_wishlist:hover { background-color: #1f1f1f; }
+.status-publish .button, .button[name="change_password"], table.my_account_orders .button, .woocommerce_message .button, .product .summary .single_add_to_cart_button, .cart .button, input.checkout-button.alt.button, .shipping-calculator-form .button, .multistep_step .button, #place_order.button, .yith-woo-ajax-navigation a.yith-wcan-reset-navigation.button { color: #212223; }
+.status-publish .button:hover, .button[name="change_password"]:hover, table.my_account_orders .button:hover, .woocommerce_message .button:hover, div.product form.cart .button:hover, #content div.product form.cart .button:hover, .cart .button:hover, input.checkout-button.alt.button:hover, .shipping-calculator-form .button:hover, .multistep_step .button:hover, #place_order.button:hover, .yith-woo-ajax-navigation a.yith-wcan-reset-navigation.button:hover { color: #FFFFFF; }
+#header-sidebar .cart_wrapper ul.cart_list li a, #header-sidebar ul.product_list_widget li .amount, #header-sidebar ul.product_list_widget li .quantity, #header-sidebar .widget_shopping_cart .cart_wrapper .total, #header-sidebar .widget_shopping_cart .cart_wrapper .total .amount { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #ffffff; font-style: normal; font-weight: 400; }
+#header-sidebar .cart_wrapper ul.cart_list li a:hover { color: #ffffff; }
+#header-sidebar .cart_wrapper .cart_list li a.remove_item { font-size: 10px; font-family: 'Noticia Text', sans-serif; color: #B9B8B8; font-style: normal; font-weight: 400; }
+#header-sidebar .cart_wrapper .cart_list li a.remove_item:hover { color: #ffffff; }
+#header .cart_wrapper .cart_list span.quantity { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #ffffff; font-style: normal; font-weight: 400; }
+#header-sidebar .cart_wrapper .cart_list li.empty { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #ffffff; font-style: normal; font-weight: 400; }
+.post-title, .post-title a { font-size: 22px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+.blog-big .meta div p, .blog-big .meta div p a { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #5f5e5e; font-style: normal; font-weight: 400; }
+.blog-big .meta a:hover, .blog-small .meta a:hover { color: #000; }
+.blog-big .meta .post-title:hover, .blog-big .meta .post-title a:hover, .blog-elegant .post-title:hover, .blog-elegant .post-title a:hover { color: #B77A2B; }
+#footer { background: #807367; }
+#footer, #footer *, #copyright *, #copyright .inner, #footer .recent-post .thumb-img img, #footer .widget_archive ul li a, #footer .widget_archive ul li a:hover, #footer .widget_nav_menu ul li a, #footer .widget_nav_menu ul li a:hover, #footer .widget_pages ul li a, #footer .widget_pages ul li a:hover, #footer .widget_categories ul li a, #footer .widget_categories ul li a:hover, #footer #searchform input, #footer .widget_flickrRSS img, #footer .widget_nav_menu ul li a, #footer .widget_pages ul li a, #footer .widget_categories ul li a, #footer .widget_archive ul li a:hover, #footer .widget_nav_menu ul li.current_page_item > a, #footer .widget_pages ul li.current_page_item > a, #footer .widget_categories ul li.current_page_item > a, #footer .testimonial-widget div.name-testimonial, #footer .last-tweets-widget ul li, #footer .yit-widget-content .widget, #footer .portfolio-categories ul li, #footer .recent-comments .avatar img, #footer .more-projects-widget .work-thumb, #footer .more-projects-widget .controls, #footer .more-projects-widget .top, #footer .featured-projects-widget img, #footer .thumb-project img { border-color: #dfdcdc; }
+#copyright { background: #ffffff; }
+.boxed #wrapper, .faq-title, .faq-item, .faq-title.active, ul.products li.product.grid .product-thumbnail { background-color: #ffffff; }
+code, pre, body hr,
+                           #copyright .inner,
+                           #footer .inner,
+                           .gallery img,
+                           .content .archive-list ul,
+                           .content .archive-list ul li,
+                           .more-projects-widget .work-thumb,
+                           .more-projects-widget .controls,
+                           .more-projects-widget .top,
+                           .featured-projects-widget img,
+                           .thumb-project img, #searchform input,
+                           .portfolio-categories ul li,
+                           .portfolio-categories ul li:hover,
+                           .recent-comments .avatar img,
+                           #portfolio .more-link,
+                           #portfolio .more-link:hover,
+                           .accordion-title,
+                           .accordion-item-thumb img,
+                           form input[type="text"],
+                           form textarea,
+                           .testimonial-page,
+                           div.section-caption .caption,
+                           .line,
+                           .last-tweets-widget ul li,
+                           .toggle p.tab-index,
+                           .toggle .content-tab,
+                           .testimonial,
+                           .google-map-frame,
+                           .section.blog .post,
+                           .section.blog h4.other-articles,
+                           .section.blog .sticky .thumbnail,
+                           .section .portfolio-sticky .work-categories,
+                           .testimonial, #searchform input,
+                           .blog-big .meta p,
+                           .blog-big p.list-tags,
+                           .blog-small .image-wrap,
+                           .comment-container,
+                           .image-square-style #comments img.avatar,
+                           #comments .comment-author img,
+                           .comment-meta,
+                           #respond input,
+                           #respond textarea,
+                           img.comment-avatar,
+                           .portfolio-big-image a.thumb,
+                           .portfolio-big-image a.more,
+                           .portfolio-big-image a.more:hover,
+                           .portfolio-big-image .work-thumbnail a.nozoom,
+                           .portfolio-big-image .work-skillsdate,
+                           .internal_page_item, .gallery-wrap li h5,
+                           .gallery-filters,
+                           .portfolio-full-description a.thumb,
+                           .portfolio-full-description a.more,
+                           .portfolio-full-description a.more:hover,
+                           .portfolio-full-description .work-skillsdate,
+                           .related_img,
+                           #portfolio.columns .overlay_a,
+                           .yit-widget-content .widget,
+                           .slider.thumbnails .showcase-thumbnail img,
+                           .slider.thumbnails .showcase-thumbnail img:hover,
+                           .slider.thumbnails .showcase-thumbnail.active img,
+                           .recent-post .thumb-img img,
+                           .widget_archive ul li a,
+                           .widget_archive ul li a:hover,
+                           .widget_nav_menu ul li a,
+                           .widget_nav_menu ul li a:hover,
+                           .widget_pages ul li a,
+                           .widget_pages ul li a:hover,
+                           .widget_categories ul li a,
+                           .widget_categories ul li a:hover,
+                           #searchform input, .widget_flickrRSS img,
+                           .widget_nav_menu ul li a,
+                           .widget_pages ul li a,
+                           .widget_categories ul li a,
+                           .widget_archive ul li a:hover,
+                           .widget_nav_menu ul li.current_page_item > a,
+                           .widget_pages ul li.current_page_item > a,
+                           .widget_categories ul li.current_page_item > a,
+                           .testimonial-widget div.name-testimonial,
+                           .last-tweets-widget ul li,
+                           .yit-widget-content .widget,
+                           .portfolio-categories ul li,
+                           .recent-comments .avatar img,
+                           .more-projects-widget .work-thumb,
+                           .more-projects-widget .controls,
+                           .more-projects-widget .top,
+                           .featured-projects-widget img,
+                           .thumb-project img,
+                           .picture_overlay,
+                           #respond textarea:focus,
+                           #multistep_resume a,
+                           #multistep_resume span,
+                           ul.products li.product .thumbnail-wrapper img,
+                           .cart-collaterals .cart_totals,
+                           .sitemap h3 { border-color: #dfdcdc; }
+.portfolio-big-image .work-thumbnail .thumb-wrapper:hover,
+            	                .related_project .related_img:hover,
+            	                .portfolio-categories ul li:hover,
+            	                #portfolio .more-link:hover,
+            	                .portfolio-big-image a.more:hover,
+            	                #portfolio.columns .overlay_a:hover,
+            	                .showcase-thumbnail img:hover,
+            	                .widget_archive ul li a:hover,
+            	                .widget_nav_menu ul li a:hover,
+            	                .widget_pages ul li a:hover,
+            	                .widget_categories ul li a:hover,
+            	                .picture_overlay:hover,
+            	                ul.products li.product.grid .thumbnail-wrapper:hover img { border-color: #959491; }
+#back-top { background-color: #ffffff; }
+#header { background-color: ; background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+#nav { background-color: #4a4439; }
+#nav ul.sub-menu, #nav ul.children, #topbar #lang_sel ul ul { background-color: #ffffff; }
+#nav, #nav > ul li a, #nav .menu > ul li a, #nav .megamenu ul.sub-menu li, #nav ul.sub-menu li, #nav ul.children li { border-color: #dfdcdc; }
+#nav .megamenu ul.sub-menu li.menu-item-custom-content p { color: #121212; }
+#nav .megamenu ul.sub-menu li.menu-item-custom-content span.highlight { color: #0D0D0D; }
+.error-404-text p { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #666767; font-style: normal; font-weight: 400; }
+.error-404-text p a { color: #000000; }
+.error-404-text p a:hover { color: #815207; }
+div.popup .title { font-size: 21px; font-family: 'Noticia Text', sans-serif; color: #666767; font-style: normal; font-weight: 400; }
+div.popup, div.popup_message, div.popup_message p, div.popup_message span { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #666767; font-style: normal; font-weight: 400; }
+#portfolios { background: #ffffff url('http://www.ivoryandart.com/wp-content/themes/boemia/images/backgrounds/032.jpg'); font-size: 18px; font-family: 'Abel', sans-serif; color: #000000; font-style: italic; font-weight: 700; }
+.testimonial .testimonial-text p, .testimonial .testimonial-text-full p, .testimonial-page .testimonial-text-full p { font-size: 11px; font-family: 'Noticia Text', sans-serif; color: #7e7d7d; font-style: normal; font-weight: 400; }
+.testimonial .testimonial-name a.name, .testimonial .testimonial-name p.name, .testimonial-page .testimonial-name a.name, .testimonial-page .testimonial-name p.name { font-size: 11px; font-family: 'Noticia Text', sans-serif; color: #b26706; font-style: normal; font-weight: 400; }
+.testimonials-slider ul.testimonials li blockquote p a, .testimonials-flexslider ul li blockquote p a { font-size: 16px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+.testimonials-slider ul.testimonials li p.meta, .testimonials-slider ul.testimonials li p.meta a, .testimonials-flexslider ul li p.meta a { font-size: 11px; font-family: 'Noticia Text', sans-serif; color: #b26706; font-style: normal; font-weight: 400; }
+.testimonial .testimonial-name a.website, .testimonial .testimonial-name span.website, .testimonial-page .testimonial-name a.website, .testimonial-page .testimonial-name span.website { font-size: 11px; font-family: 'Noticia Text', sans-serif; color: #7e7d7d; font-style: normal; font-weight: 400; }
+.testimonial blockquote { font-size: 14px; font-family: 'Noticia Text', sans-serif; color: #2e2d2d; font-style: normal; font-weight: 400; }
+.testimonials-slider ul.testimonials li p.meta a:hover, .testimonials-flexslider ul li p.meta a:hover { color: #030303; }
+#footer, #footer p, #footer li { font-size: 13px; font-family: 'Arial', sans-serif; color: #ffffff; font-style: normal; font-weight: 400; }
+#footer a { color: #ffffff; }
+#footer a:hover { color: #000000; }
+#footer h3 { font-size: 14px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+#copyright, #copyright div p, #copyright p, #copyright a, #copyright p a, #copyright div p a { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #585555; font-style: normal; font-weight: 400; }
+#copyright a, #copyright div a, #copyright div p a { color: #959494; }
+#copyright a:hover, #copyright div a:hover, #copyright div p a:hover { color: #000000; }
+a, p, li, address, dd, blockquote, td, th, .paragraph-links a, a.text-color, ul.filters li a, .menu-select select, .testimonial-widget li a, .testimonial-widget li p, #search_mini, #yith-s, .newsletter-input input, .newsletter-submit input, .features-tab-container .features-tab-labels li, .features-tab-content { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #666767; font-style: normal; font-weight: 400; }
+a, a.text-color:hover, ul.filters li a:hover, ul.filters li a.active { color: #000000; }
+a:hover, body .login_register a:hover, #multistep_step1 .step1_login_form form.login_checkout .lost_password:hover, #breadcrumb a:hover { color: #555; }
+#yit-breadcrumb a, #breadcrumb a, #breadcrumb { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #9a9a9b; font-style: normal; font-weight: 400; }
+#yit-breadcrumb a:hover, #breadcrumb a:hover { color: #535353; }
+#page-meta #yit-breadcrumb a.current, #breadcrumb { color: #a96605; }
+h1, h1 a { font-size: 24px; font-family: 'Noticia Text', sans-serif; color: #000000; font-style: normal; font-weight: 700; }
+h2, h2 a { font-size: 22px; font-family: 'Noticia Text', sans-serif; color: #000000; font-style: normal; font-weight: 700; }
+h3, h3 a { font-size: 15px; font-family: 'Noticia Text', sans-serif; color: #000000; font-style: normal; font-weight: 400; }
+h4, h4 a { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #000000; font-style: normal; font-weight: 400; }
+h5, h5 a { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #000000; font-style: normal; font-weight: 400; }
+h6, h6 a { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #000000; font-style: normal; font-weight: 400; }
+.slogan h2 { font-size: 23px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 700; }
+.slogan h3 { font-size: 18px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+.special-font { font-size: 12px; font-family: 'Shadows Into Light', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { color: #030303; }
+#back-top a, #back-top a:hover { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+.sitemap h3 { font-size: 17px; font-family: 'Noticia Text', sans-serif; color: #848484; font-style: normal; font-weight: 400; }
+#header #logo #textual, span.logo { font-size: 60px; font-family: 'Arial', sans-serif; color: #030303; font-style: normal; font-weight: 800; }
+#header #logo #textual span { font-size: 40px; font-family: 'Montez', sans-serif; color: #ac670c; font-style: normal; font-weight: 400; }
+#header #logo #tagline { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+#header #logo #tagline span { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+#topbar a { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #8f9090; font-style: normal; font-weight: 400; }
+#topbar a:hover { color: #212223; }
+#nav ul li a { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #ffffff; font-style: normal; font-weight: 800; }
+#nav ul li a:hover { color: #0d0d0d; }
+#nav .current-menu-item > a, #nav .current-menu-ancestor > a, div#nav ul .current_page_item > a { color: #0d0d0d; }
+#nav ul li ul li a, #header #nav .megamenu ul.sub-menu li a, #nav .megamenu ul.sub-menu li li a, #topbar #lang_sel ul ul li a, #nav .megamenu ul.sub-menu li.menu-item-custom-content p { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #666767; font-style: normal; font-weight: 400; }
+#nav ul li ul li a:hover, #header #nav .megamenu ul.sub-menu li > a:hover, #header #nav .megamenu ul.sub-menu li li > a:hover, #topbar #lang_sel ul ul li a:hover { color: #0d0d0d; }
+#nav ul ul .current-menu-item > a, #nav ul ul .current-menu-ancestor > a, div#nav ul ul .current_page_item > a, #nav .megamenu ul.sub-menu li a { color: #0d0d0d; }
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 { font-size: 16px; font-family: 'Noticia Text', sans-serif; color: #030303; font-style: normal; font-weight: 400; }
+.sidebar p, .sidebar li, .sidebar div { font-size: 13px; font-family: 'Noticia Text', sans-serif; color: #585555; font-style: normal; font-weight: 400; }
+.sidebar a { color: #8a8989; }
+.sidebar a:hover { color: #030303; }
+.testimonial-widget li blockquote p, .testimonial-widget li blockquote p:first-child { font-size: 12px; font-family: 'Noticia Text', sans-serif; color: #585555; font-style: normal; font-weight: 400; }
+.testimonial-widget li .name-testimonial { font-size: 11px; font-family: 'Noticia Text', sans-serif; color: #000000; font-style: normal; font-weight: 400; }
+.testimonial-widget li .url-testimonial { font-size: 11px; font-family: 'Noticia Text', sans-serif; color: #585555; font-style: normal; font-weight: 400; }
+.yit_toggle_menu ul.menu > li > a { color: #010101; }
+.yit_toggle_menu ul.menu ul li a { color: #666767; }
+.yit_toggle_menu ul.menu ul li a:hover { color: #000000; }ul.products li.product .thumbnail-wrapper > span img.customImage {  border: none !important;}
+.blog-big .meta, .blog-small .meta { background: #ffffff; }

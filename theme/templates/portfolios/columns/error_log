@@ -1,0 +1,4 @@
+[19-Sep-2015 06:56:43 UTC] PHP Fatal error:  Call to undefined function yit_work_get() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/portfolios/columns/markup.php on line 8
+[19-Sep-2015 06:56:43 UTC] PHP Fatal error:  Call to undefined function yit_register_portfolio_style() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/portfolios/columns/config.php on line 7
+[24-Mar-2016 06:07:36 UTC] PHP Fatal error:  Call to undefined function yit_work_get() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/portfolios/columns/markup.php on line 8
+[24-Mar-2016 06:07:36 UTC] PHP Fatal error:  Call to undefined function yit_register_portfolio_style() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/portfolios/columns/config.php on line 7

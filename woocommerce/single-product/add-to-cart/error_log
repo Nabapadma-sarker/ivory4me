@@ -1,0 +1,6 @@
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to a member function is_purchasable() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/add-to-cart/simple.php on line 12
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function is_shop_enabled() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/add-to-cart/quantity.php on line 11
+[19-Sep-2015 07:24:47 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/add-to-cart/external.php on line 12
+[24-Mar-2016 06:15:47 UTC] PHP Fatal error:  Call to a member function is_purchasable() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/add-to-cart/simple.php on line 12
+[24-Mar-2016 06:15:47 UTC] PHP Fatal error:  Call to undefined function is_shop_enabled() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/add-to-cart/quantity.php on line 11
+[24-Mar-2016 06:15:47 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/add-to-cart/external.php on line 12

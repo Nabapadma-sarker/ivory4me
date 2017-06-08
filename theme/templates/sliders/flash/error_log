@@ -1,0 +1,4 @@
+[19-Sep-2015 06:55:13 UTC] PHP Fatal error:  Call to undefined function yit_register_slider_style() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/sliders/flash/config.php on line 9
+[19-Sep-2015 06:55:13 UTC] PHP Fatal error:  Call to undefined function yit_slide_get() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/sliders/flash/slider.php on line 11
+[24-Mar-2016 06:04:01 UTC] PHP Fatal error:  Call to undefined function yit_register_slider_style() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/sliders/flash/config.php on line 9
+[24-Mar-2016 06:04:02 UTC] PHP Fatal error:  Call to undefined function yit_slide_get() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/sliders/flash/slider.php on line 11

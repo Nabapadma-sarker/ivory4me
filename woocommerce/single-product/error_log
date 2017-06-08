@@ -1,0 +1,8 @@
+[19-Sep-2015 06:53:15 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs.php on line 13
+[19-Sep-2015 06:53:16 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/summary.php on line 14
+[19-Sep-2015 06:53:16 UTC] PHP Fatal error:  Call to undefined function yith_wcmg_is_enabled() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/product-image-magnifier.php on line 15
+[19-Sep-2015 06:53:16 UTC] PHP Fatal error:  Call to a member function get_gallery_attachment_ids() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/product-thumbnails-magnifier.php on line 29
+[24-Mar-2016 06:03:19 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/tabs.php on line 13
+[24-Mar-2016 06:03:20 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/summary.php on line 14
+[24-Mar-2016 06:03:20 UTC] PHP Fatal error:  Call to undefined function yith_wcmg_is_enabled() in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/product-image-magnifier.php on line 15
+[24-Mar-2016 06:03:20 UTC] PHP Fatal error:  Call to a member function get_gallery_attachment_ids() on a non-object in /home/sshats1974/public_html/wp-content/themes/boemia/woocommerce/single-product/product-thumbnails-magnifier.php on line 29

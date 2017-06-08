@@ -1,0 +1,2 @@
+[19-Sep-2015 06:55:15 UTC] PHP Fatal error:  Call to undefined function yit_sidebar_layout() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/services/service.php on line 16
+[24-Mar-2016 06:04:08 UTC] PHP Fatal error:  Call to undefined function yit_sidebar_layout() in /home/sshats1974/public_html/wp-content/themes/boemia/theme/templates/services/service.php on line 16
