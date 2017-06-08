@@ -91,7 +91,7 @@ jQuery(document).ready(function($){
     });
 
     //on-off
-    $('#yit_theme_option').find('.yit_options.onoff_container span').on('click', function(){
+    $('#yit_theme_option, #yit_tabs_maintenance_maintenance_general').find('.yit_options.onoff_container span').on('click', function(){
         var input = $( this ).prev( 'input' );
         var checked = input.attr( 'checked' );
 

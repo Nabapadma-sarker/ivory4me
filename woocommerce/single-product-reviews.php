@@ -75,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) )
 
     echo '</div>';
 
-    if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->id ) ) {
+    if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) {
 
         echo '<div id="review_form_wrapper"><div id="review_form">';
 

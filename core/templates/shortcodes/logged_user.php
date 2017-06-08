@@ -17,7 +17,7 @@ if( !is_user_logged_in() )
 
 global $current_user;
 
-get_currentuserinfo();
+_wp_get_current_user();
 
 if( $display == 'first_last' )
     { $display = $current_user->user_firstname . ' ' . $current_user->user_lastname; }

@@ -334,7 +334,7 @@ class YIT_Config {
 
 			
 		}  else {
-			$theme = get_theme_data(get_template_directory() . DS . 'style.css');
+			$theme = wp_get_theme(get_template_directory() . DS . 'style.css');
 
 			self::$_config['theme'] =  array(
 				'name' => $theme['Name'],

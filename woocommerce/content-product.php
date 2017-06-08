@@ -10,14 +10,14 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woothemes.com/document/template-structure/
+ * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.6.1
+ * @version 3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly
+	exit; // Exit if accessed directly
 }
 
 global $product, $woocommerce_loop;
@@ -36,19 +36,24 @@ if ( !( isset( $woocommerce_loop['layout'] ) && ! empty( $woocommerce_loop['layo
 
 ?>
 <li <?php post_class(); ?>>
-
-    <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
+    <?php
+    /**
+    * woocommerce_before_shop_loop_item hook.
+    *
+    * @hooked woocommerce_template_loop_product_link_open - 10
+    */
+    do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
     <div class="product-thumbnail group">
 
         <div class="thumbnail-wrapper">
             <?php
-                /**
-                 * woocommerce_before_shop_loop_item_title hook
-                 *
-                 * @hooked woocommerce_show_product_loop_sale_flash - 10
-                 * @hooked woocommerce_template_loop_product_thumbnail - 10
-                 */
+            /**
+             * woocommerce_before_shop_loop_item_title hook.
+             *
+             * @hooked woocommerce_show_product_loop_sale_flash - 10
+             * @hooked woocommerce_template_loop_product_thumbnail - 10
+             */
                 do_action( 'woocommerce_before_shop_loop_item_title' );
             ?>
         </div>
@@ -61,18 +66,19 @@ if ( !( isset( $woocommerce_loop['layout'] ) && ! empty( $woocommerce_loop['layo
 
         <div class="product-meta">
             <?php
-	            /**
-	             * woocommerce_shop_loop_item_title hook
-	             *
-	             * @hooked woocommerce_template_loop_product_title - 10
-	             */
+            /**
+             * woocommerce_shop_loop_item_title hook.
+             *
+             * @hooked woocommerce_template_loop_product_title - 10
+             */
 	            do_action( 'woocommerce_shop_loop_item_title' );
 
-                /**
-                 * woocommerce_after_shop_loop_item_title hook
-                 *
-                 * @hooked woocommerce_template_loop_price - 10
-                 */
+            /**
+             * woocommerce_after_shop_loop_item_title hook.
+             *
+             * @hooked woocommerce_template_loop_rating - 5
+             * @hooked woocommerce_template_loop_price - 10
+             */
                 do_action( 'woocommerce_after_shop_loop_item_title' );
             ?>
         </div>
@@ -81,11 +87,12 @@ if ( !( isset( $woocommerce_loop['layout'] ) && ! empty( $woocommerce_loop['layo
 
     <?php
 
-	    /**
-	     * woocommerce_after_shop_loop_item hook
-	     *
-	     * @hooked woocommerce_template_loop_add_to_cart - 10
-	     */
+    /**
+     * woocommerce_after_shop_loop_item hook.
+     *
+     * @hooked woocommerce_template_loop_product_link_close - 5
+     * @hooked woocommerce_template_loop_add_to_cart - 10
+     */
 	    do_action( 'woocommerce_after_shop_loop_item' );
 
     ?>

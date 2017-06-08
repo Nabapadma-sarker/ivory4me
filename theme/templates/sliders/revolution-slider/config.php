@@ -144,11 +144,9 @@ function yit_if_thereis_revslider() {
 
     $table_sliders = GlobalsRevSlider::$table_sliders;
     $table_slides  = GlobalsRevSlider::$table_slides;
-    $table_settings  = GlobalsRevSlider::$table_settings;
 
     if ( $wpdb->get_var("show tables like '$table_sliders'") == $table_sliders &&
-        $wpdb->get_var("show tables like '$table_slides'") == $table_slides &&
-        $wpdb->get_var("show tables like '$table_settings'") == $table_settings
+        $wpdb->get_var("show tables like '$table_slides'") == $table_slides
     ) {
         return true;
     }

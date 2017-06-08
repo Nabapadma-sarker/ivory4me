@@ -953,7 +953,8 @@ if( !function_exists( 'yit_get_registered_nav_menus' ) ) {
      * @since 1.0.0
      */
     function yit_get_registered_nav_menus() {
-        $menus = get_terms( 'nav_menu' );
+        $args = array( 'taxonomy' => 'nav_menu' );
+        $menus = get_terms( $args );
         $return = array();
         
         foreach( $menus as $menu ) {
@@ -1147,16 +1148,13 @@ if( !function_exists( 'yit_delete_cache_callback' ) ) {
             unset( $files[0], $files[1] );
             
             foreach( $files as $file ) {
-                if( $file != 'google_fonts.json' ) {
-                
-                    if( !@unlink( $dir . $file ) && $echo ) {
-                        yit_get_model( 'message' )->addMessage( __( 'Error. Unable to delete the cache!', 'yit' ), 'error' );
-                        yit_get_model( 'message' )->printGlobalMessages();
-                        
-                        if( isset($_POST['die'])) {
-                        	die();
-                        }
-                    }   
+                if( !@unlink( $dir . $file ) && $echo ) {
+                    yit_get_model( 'message' )->addMessage( __( 'Error. Unable to delete the cache!', 'yit' ), 'error' );
+                    yit_get_model( 'message' )->printGlobalMessages();
+
+                    if( isset($_POST['die'])) {
+                        die();
+                    }
                 }
             }
         }

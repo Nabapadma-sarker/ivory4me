@@ -17,7 +17,7 @@ $yit_topbar = true;
  
 do_action( 'yit_before_logo' ) ?>
 
-<div class="row" style="display: none;">
+<div class="row">
 	<!-- START LOGO -->
 	<div id="logo" class="span12 group">
 	    <?php
@@ -42,7 +42,9 @@ do_action( 'yit_before_logo' ) ?>
 		do_action( 'yit_main_navigation') ?>
 		<!-- END MAIN NAVIGATION -->
 
-	
+		<div id="nav-sidebar">
+            <div class="hidden-1024 visible-phone"><?php if( yit_get_option( 'show-top-menu-search' ) ) the_widget('search_mini'); ?></div>
+		</div>
 	</div>
 </div>
 

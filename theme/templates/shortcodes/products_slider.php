@@ -16,14 +16,36 @@
 		'posts_per_page' => -1,
 		'ignore_sticky_posts'	=> 1,
 		'meta_query' => '',
-        'fields' => 'id=>parent'
+        'fields' => 'id=>parent',
+        'tax_query' => ''
 	);
-	
+
 	if(isset( $featured) && $featured == 'yes' ){
-    	$args['meta_query'][] = array(
-      		'key' 		=> '_featured',
-      		'value' 	=> 'yes'
-    	);
+
+		if( IS_PRIOR_3_0 ){
+			$args['meta_query'][] = array(
+				'key' 		=> '_featured',
+				'value' 	=> 'yes'
+			);
+		}else{
+			$tax_query   = WC()->query->get_tax_query();
+
+			$tax_query[] = array(
+
+				'taxonomy' => 'product_visibility',
+
+				'field'    => 'name',
+
+				'terms'    => 'featured',
+
+				'operator' => 'IN',
+
+			);
+
+			$args['tax_query'] = $tax_query;
+		}
+
+
   	}
 	
 	if(isset( $best_sellers) && $best_sellers == 'yes' ){
@@ -40,6 +62,7 @@
         'orderby' 		=> $orderby,
         'order' 		=> $order,
         'meta_query' 	=> $args['meta_query'],
+        'tax_query' => $args['tax_query']
     );
 	
 	if(isset($atts['skus'])){
@@ -72,24 +95,10 @@
 	if ( $products->have_posts() ) :
 	    echo '<div class="woocommerce">';
 		echo '<div class="products-slider-wrapper"><div class="products-slider">';
-
-
-		if (isset($title) && $title != '') {
-            if (isset($query_args['product_cat'])) {
-
-                $first_cat = explode(',',$query_args['product_cat']);
-                $category_id = get_term_by('slug', $first_cat[0], 'product_cat', 'ARRAY_A');
-
-                $cat_url = get_term_link($category_id['term_id'],'product_cat');
-                echo '<h2><a href="' . $cat_url . '">' . $title . '</a></h2>';
-            } else {
-                echo '<h2>' . $title . '</h2>';
-            }
-
-        }
-		else {
-            echo '<h2>&nbsp;</h2>';
-        }
+		if (isset($title) && $title != '')
+			echo '<h4>'.$title.'</h4>';
+		else
+			echo '<h4>&nbsp;</h4>';
 		echo '<ul class="products row">';
         while ( $products->have_posts() ) : $products->the_post();
             ( function_exists( 'wc_get_template_part' ) ) ? wc_get_template_part( 'content', 'product' ) : woocommerce_get_template_part( 'content', 'product' );

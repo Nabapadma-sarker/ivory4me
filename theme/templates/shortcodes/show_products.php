@@ -29,19 +29,26 @@
     }
 	
 	if (strcmp($show, 'all') == 0) { // show all products
-		
-		$args['meta_query'][] = array(
-      		'key' 		=> '_visibility',
-      		'value' 	=> array('catalog', 'visible'),
-				'compare' 	=> 'IN'
-    	);
+
+		$args = yit_product_visibility_meta( $args );
 		
 	}elseif (strcmp($show, 'featured') == 0) { // show featured products
-  		
-  		$args['meta_query'][] = array(
-      		'key' 		=> '_featured',
-      		'value' 	=> 'yes'
-    	);
+  		if( IS_PRIOR_3_0 ){
+			$args['meta_query'][] = array(
+				'key' 		=> '_featured',
+				'value' 	=> 'yes'
+			);
+		}else{
+			$tax_query   = WC()->query->get_tax_query();
+			$tax_query[] = array(
+				'taxonomy' => 'product_visibility',
+				'field'    => 'name',
+				'terms'    => 'featured',
+				'operator' => 'IN',
+			);
+			$args['tax_query'] = $tax_query;
+		}
+
 		
 	}elseif (strcmp($show, 'best_sellers') == 0) { // show best sellers products
   		

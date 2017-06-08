@@ -611,7 +611,7 @@ if( !function_exists( 'yit_breadcrumb' ) ) {
             $breadcrumbs = array();
             
             while ( $parent_id ) {
-                $page = get_page( $parent_id );
+                $page = get_post( $parent_id );
                 $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title( $page->ID ) . '</a>';
                 $parent_id  = $page->post_parent;
             }

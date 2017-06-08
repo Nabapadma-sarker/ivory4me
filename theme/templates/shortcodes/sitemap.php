@@ -147,9 +147,11 @@
 	//get products
 	if( in_array('products', $order) && is_shop_installed() ) {
 		
-		$categories = get_terms( 'product_cat', array(
-		 	'hide_empty' => 0
-		));
+		$args = array(
+			'hide_empty' => 0,
+			'taxonomy'   => 'product_cat',
+		);
+		$categories = get_terms( $args );
 		
 		//$sitemap['products']  = '<div class="sitemap-products-container span3">';
 		$sitemap['products'] = '<h3>' . yit_get_option('sitemap-products-title') . '</h3>';

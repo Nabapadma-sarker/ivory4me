@@ -20,7 +20,7 @@ if( function_exists( 'has_custom_logo' ) && has_custom_logo() ) : ?>
 <?php the_custom_logo() ?>
 
 <?php elseif( yit_get_option( 'custom-logo' ) && $logo_url != '' ) : ?>
-<a id="logo-img" href="http://www.ivoryandart.com/" title="<?php bloginfo( 'name' ) ?>">
+<a id="logo-img" href="<?php echo home_url() ?>" title="<?php bloginfo( 'name' ) ?>">
     <img src="<?php echo $logo_url ?>" title="<?php bloginfo( 'name' ) ?>" alt="<?php bloginfo( 'name' ) ?>" />
 </a>
 <?php else : ?>

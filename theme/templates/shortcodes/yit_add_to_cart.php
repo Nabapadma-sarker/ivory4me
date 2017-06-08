@@ -8,21 +8,21 @@ $show_price = ( isset($show_price) && $show_price == 'yes' ) ? true : false;
 $show_cart = ( isset($show_cart) && $show_cart == 'yes' ) ? true : false;
 
 
-$product = get_product( $id );
+$product = IS_PRIOR_3_0 ? get_product( $id ) : wc_get_product( $id );
 if ( ! $product->is_purchasable() ) return;
 ?>
 
 
 <?php if ( $product->is_in_stock() && is_shop_enabled() ) : ?>
 	<div class="sc_addcart">
-		<?php if ($product->product_type == 'simple') : ?>
+		<?php if ($product->is_type('simple')) : ?>
 			<?php if ( $show_price ) echo $product->get_price_html(); ?>
 			<?php if ( $show_cart ) : ?>
 				<form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
-				 	<button type="submit" class="single_add_to_cart_button button"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'yit' ), $product->product_type); ?></button>
+				 	<button type="submit" class="single_add_to_cart_button button"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'yit' ), $product->get_type()); ?></button>
 				</form>
 			<?php endif ?>
-		<?php elseif ($product->product_type == 'variable' && $attribute_id != '') : ?>
+		<?php elseif ($product->is_type('variable') && $attribute_id != '') : ?>
 			<?php
 				$attributes = $product->get_available_variations();
 				foreach ($attributes as $key){
@@ -37,7 +37,7 @@ if ( ! $product->is_purchasable() ) return;
 				}
 			?>
 			<?php if ( $show_price ) :
-				$variation = $product->get_child( $attribute_id );
+				$variation = wc_get_product( $attribute_id );
 				echo $variation->get_price_html();			
 			endif ?>
 			<?php if ( $show_cart ) : ?>

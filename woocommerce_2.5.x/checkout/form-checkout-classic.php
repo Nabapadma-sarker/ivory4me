@@ -31,7 +31,7 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', wc_get_checko
 
 		<div class="row-fluid" id="customer_details">
 			
-            <div class="span12">
+            <div class="span6">
             
                 <div class="col-1">
     
@@ -39,15 +39,27 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', wc_get_checko
                     
                     <div class="shipping-fields"><?php do_action('woocommerce_checkout_shipping'); ?></div>
     
-                </div>                <div class="col-2">                                    <?php do_action( 'woocommerce_checkout_after_customer_details'); ?>                    <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>                    <div id="order_review">                        <h3 id="order_review_heading"><?php _e('Your order', 'yit'); ?></h3>                        <?php do_action('woocommerce_checkout_order_review'); ?>                    </div>                    <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>                    </div>
+                </div>
                 
             </div>
             
-           <!-- <div class="span6">
+            <div class="span6">
     
+                <div class="col-2">
                 
+                    <?php do_action( 'woocommerce_checkout_after_customer_details'); ?>
+
+                    <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+                    <div id="order_review">
+                        <h3 id="order_review_heading"><?php _e('Your order', 'yit'); ?></h3>
+
+                        <?php do_action('woocommerce_checkout_order_review'); ?>
+                    </div>
+                    <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+    
+                </div>
             
-            </div> -->
+            </div>
 
 		</div>
 

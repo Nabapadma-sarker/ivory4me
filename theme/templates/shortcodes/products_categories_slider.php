@@ -26,10 +26,11 @@
   		'orderby'    => $orderby,
   		'order'      => $order,
   		'hide_empty' => $hide_empty,
-		'include'    => $ids
+		'include'    => $ids,
+		'taxonomy'   => 'product_cat',
 	);
 	
-  	$terms = get_terms( 'product_cat', $args ); 
+  	$terms = get_terms( $args ); 
     
     $woocommerce_loop['view'] = 'grid';
     if ( isset( $layout ) && $layout != 'default' ) $woocommerce_loop['layout'] = $layout;          

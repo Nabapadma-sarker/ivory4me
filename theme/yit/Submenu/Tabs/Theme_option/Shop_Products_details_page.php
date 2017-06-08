@@ -128,7 +128,7 @@ class YIT_Submenu_Tabs_Theme_option_Shop_Products_details_page extends YIT_Subme
                 'id'   => 'shop-number-related',
                 'type' => 'number',
                 'name' => __( 'Number of Related Products', 'yit' ),
-                'desc' => __( 'Select the total numbers of the related products displayed, on the product detail page. Note: related products are displayed randomly from Woocommerce/Jigoshop. Sometimes the number of related products could be less than the number of items selected. This number depends from the query plugin, not from the theme.', 'yit' ),
+                'desc' => __( 'Select the total numbers of the related products displayed, on the product detail page. Note: related products are displayed randomly from Woocommerce. Sometimes the number of related products could be less than the number of items selected. This number depends from the query plugin, not from the theme.', 'yit' ),
                 'std'  => apply_filters( 'yit_shop-number-related_std', 3 ),
                 'min'  => 1,
                 'deps' => array(

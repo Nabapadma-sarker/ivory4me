@@ -32,14 +32,6 @@
     <!-- END BG SHADOW -->
     
     <?php wp_footer() ?> 
-    <script>
-      (function($) {
-          $('.logo-ivoryandart').on('click', function(event) {
-              event.preventDefault();
-              $.colorbox({html:"<img src='http://www.ivoryandart.com/popup1.png'width='500'height='70%'><a style='margin-left:20px; font-size;12px;' href='http://www.ivoryandart.com/education-center/all-about-mammoth-ivory/'>Read More about legal Mammoth Ivory here...</a>",innerWidth:"40%",innerHeight:"90%"});
-          })
-      })(jQuery);
-    </script>
 </body>
 <!-- END BODY -->
 </html>

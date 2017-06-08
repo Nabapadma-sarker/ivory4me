@@ -24,7 +24,7 @@ global $woocommerce, $yit_topbar;
 ?>
 
 <?php if( $yit_topbar ): ?>
-    <a href="<?php echo WC()->cart->get_cart_url(); ?>" class="cart_control">Cart</a>
+    <a href="<?php echo wc_get_cart_url(); ?>" class="cart_control">Cart</a>
     <div class="cart_wrapper">
 <?php endif ?>
 

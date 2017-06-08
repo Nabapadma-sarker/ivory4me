@@ -9,10 +9,12 @@
 
 global $woocommerce;
 
-define( 'WC_LATEST_VERSION', '2.6' );
+define( 'WC_LATEST_VERSION', '3.0.1' );
+
+define ( 'IS_PRIOR_3_0', version_compare( $woocommerce->version, '3.0', '<' ) );
 
 /* fix 2.4 */
-if( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.4', '>=' ) ) {
+if( version_compare( $woocommerce->version, '2.4', '>=' ) ) {
 
     remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
     remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20 );
@@ -44,10 +46,13 @@ if( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version
 
                     <?php if( $show_add_to_cart ) : ?>
                         <div class="variations_button">
-                            <input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
-                            <input type="hidden" name="product_id" value="<?php echo esc_attr( $product->id ); ?>" />
+                            <?php $product_id = IS_PRIOR_3_0 ? $product->id : $product->get_id(); ?>
+                            <?php $product_type = IS_PRIOR_3_0 ? $product->product_type : $product->get_type() ?>
+                            <?php $button_text = IS_PRIOR_3_0 ? apply_filters('single_add_to_cart_text', __('Add to cart', 'yit'), $product_type) : $product->single_add_to_cart_text(); ?>
+                            <input type="hidden" name="add-to-cart" value="<?php echo $product_id; ?>" />
+                            <input type="hidden" name="product_id" value="<?php echo esc_attr( $product_id ); ?>" />
                             <input type="hidden" name="variation_id" value="" />
-                            <button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __('Add to cart', 'yit'), $product->product_type); ?></button>
+                            <button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $button_text ) ?></button>
                         </div>
                     <?php endif ?>
                     <!--/div-->
@@ -71,7 +76,7 @@ if ( ! defined( 'YIT_DEBUG' ) || ! YIT_DEBUG ) {
 }
 
 /* woocommerce 2.0.x */
-if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' ) ) {
+if ( version_compare( $woocommerce->version, '2.1', '<' ) ) {
 
     add_filter( 'woocommerce_template_url', create_function( "", "return 'woocommerce_2.0.x/';" ) );
     add_action( 'wp_enqueue_scripts', 'yit_enqueue_woocommerce_styles', 11 );
@@ -80,24 +85,28 @@ if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->versio
 } else {
 
     /* woocommerce 2.1.x */
-    if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.2', '<' ) ) {
+    if ( version_compare( $woocommerce->version, '2.2', '<' ) ) {
         add_filter( 'WC_TEMPLATE_PATH', create_function( "", "return 'woocommerce_2.1.x/';" ) );
     }
     /* woocommerce 2.2.x */
-    else if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.3', '<' ) ) {
+    else if ( version_compare( $woocommerce->version, '2.3', '<' ) ) {
         add_filter( 'woocommerce_template_path', create_function( "", "return 'woocommerce_2.2.x/';" ) );
     }/* woocommerce 2.3.x */
-    else if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.4', '<' ) ) {
+    else if ( version_compare( $woocommerce->version, '2.4', '<' ) ) {
         add_filter( 'woocommerce_template_path', create_function( "", "return 'woocommerce_2.3.x/';" ) );
     }/* woocommerce 2.4.x */
-    else if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.5', '<' ) ) {
+    else if ( version_compare( $woocommerce->version , '2.5', '<' ) ) {
         add_filter( 'woocommerce_template_path', create_function( "", "return 'woocommerce_2.4.x/';" ) );
     }/* woocommerce 2.5.x */
-    else if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.6', '<' ) ) {
+    else if ( version_compare( $woocommerce->version, '2.6', '<' ) ) {
         add_filter( 'woocommerce_template_path', create_function( "", "return 'woocommerce_2.5.x/';" ) );
     }
+    else if ( version_compare( $woocommerce->version, '3.0', '<' ) ) {
+        add_filter( 'woocommerce_template_path', create_function( "", "return 'woocommerce_2.6.x/';" ) );
+    }
 
-    if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.2', '>' ) ) {
+
+    if ( version_compare( $woocommerce->version, '2.2', '>' ) ) {
         add_action( 'wp_enqueue_scripts', 'yit_enqueue_woocommerce_2_3_assets' );
     }
 
@@ -105,8 +114,10 @@ if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->versio
     $woo_shop_folder = 'global';
     add_action( 'admin_init', 'yit_check_version', 8 );
 
-    if ( ! is_active_widget( false, false, 'woocommerce_price_filter', true ) ) {
-        add_filter( 'loop_shop_post_in', array( WC()->query, 'price_filter' ) );
+    if ( version_compare( $woocommerce->version, '2.6', '<' ) ) {
+        if ( ! is_active_widget( false, false, 'woocommerce_price_filter', true ) ) {
+            add_filter( 'loop_shop_post_in', array( WC()->query, 'price_filter' ) );
+        }
     }
 
 }
@@ -209,7 +220,7 @@ add_filter( 'yit_sample_data_options', 'yit_add_plugins_options' );
 function yit_woocommerce_hooks() {
     global $woocommerce;
 
-    if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.3', '<' ) ) {
+    if ( version_compare( $woocommerce->version, '2.3', '<' ) ) {
         add_filter( 'add_to_cart_fragments', 'yit_add_to_cart_success_ajax' );
     } else {
         add_filter( 'woocommerce_add_to_cart_fragments', 'yit_add_to_cart_success_ajax' );
@@ -217,7 +228,7 @@ function yit_woocommerce_hooks() {
 }
 add_action( 'after_setup_theme', 'yit_woocommerce_hooks' );
 
-if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<=' ) ) {
+if ( version_compare( $woocommerce->version, '2.1', '<=' ) ) {
     add_filter( 'woocommerce_get_image_size_shop_featured', 'yit_get_featured_image_size' );
 } else {
 
@@ -290,7 +301,7 @@ else {
 
 function yit_related_posts_per_page() {
     global $product;
-    $related = $product->get_related(yit_get_option('shop-number-related'));
+    $related = IS_PRIOR_3_0 ? $product->get_related(yit_get_option('shop-number-related')) : wc_get_related_products( $product->get_id(),yit_get_option('shop-number-related') );
 
     return array(
         'posts_per_page' 		=> yit_get_option('shop-number-related'),
@@ -337,7 +348,7 @@ if( yit_get_option('shop-fields-order') ) {
         $fields['billing_state'][0] = 'form-row-wide';
 
         /* FIX WOO 2.1.x */
-        if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '>=' ) ) {
+        if ( version_compare( $woocommerce->version, '2.1', '>=' ) ) {
             $fields['billing_country']['class'][0] = 'form-row-wide';
         }
 
@@ -351,7 +362,7 @@ if( yit_get_option('shop-fields-order') ) {
     add_filter( 'woocommerce_shipping_fields' , 'woocommerce_restore_shipping_fields_order' );
     function woocommerce_restore_shipping_fields_order( $fields ) {
         global $woocommerce;
-        if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' ) ) {
+        if ( version_compare( $woocommerce->version, '2.1', '<' ) ) {
             $fields['shipping_city']['class'][0] = 'form-row-last';
         }
         $fields['shipping_country']['class'][0] = 'form-row-first';
@@ -360,7 +371,7 @@ if( yit_get_option('shop-fields-order') ) {
         $fields['shipping_state'][0] = 'form-row-wide';
 
         /* FIX WOO 2.1.x */
-        if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '>=' ) ) {
+        if ( version_compare( $woocommerce->version, '2.1', '>=' ) ) {
             $fields['shipping_country']['class'][0] = 'form-row-wide';
         }
 
@@ -465,7 +476,7 @@ function woocommerce_template_loop_product_thumbnail() {
     echo '<a href="' . get_permalink() . '" class="thumb">' . woocommerce_get_product_thumbnail();
 
     // add another image for hover
-    $attachments = $product->get_gallery_attachment_ids();
+    $attachments = IS_PRIOR_3_0 ? $product->get_gallery_attachment_ids() : $product->get_gallery_image_ids();
     if ( ! empty( $attachments ) && isset( $attachments[0] ) ) {
         yit_image( "id=$attachments[0]&size=shop_catalog&class=image-hover" );
     }
@@ -543,7 +554,7 @@ function yit_detect_span_catalog_image( $classes ) {
  * SIZES
  */
 
-if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' ) ) {
+if ( version_compare( $woocommerce->version, '2.1', '<' ) ) {
    // shop small
     if ( ! function_exists('yit_shop_catalog_w') ) : function yit_shop_catalog_w()      { global $woocommerce; $size = $woocommerce->get_image_size('shop_catalog'); return $size['width']; } endif;
     if ( ! function_exists('yit_shop_catalog_h') ) : function yit_shop_catalog_h()      { global $woocommerce; $size = $woocommerce->get_image_size('shop_catalog'); return $size['height']; } endif;
@@ -1235,7 +1246,7 @@ if ( ! function_exists( 'yith_wc_get_page_id' ) ) {
 
         global $woocommerce;
 
-        if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' ) ) {
+        if ( version_compare( $woocommerce->version, '2.1', '<' ) ) {
             return woocommerce_get_page_id( $page );
         }
         else {
@@ -1274,7 +1285,7 @@ function yit_enqueue_wc_styles( $styles ) {
     unset( $styles['woocommerce-layout'], $styles['woocommerce-smallscreen'], $styles['woocommerce-general'] );
 
     $style_version = '';
-    if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.6', '<' ) ) {
+    if ( version_compare( $woocommerce->version, '2.6', '<' ) ) {
         $style_version = '_' . substr( $woocommerce->version, 0, 3 ) . '.x';
     }
 
@@ -1363,7 +1374,7 @@ if ( ! function_exists( 'yit_woocommerce_default_shiptobilling_only' ) ) {
 
 // Redirect to checkout page after add to cart
 if ( yit_get_option( 'shop-redirect-to-checkout' ) ) {
-    add_filter ( 'add_to_cart_redirect', 'yit_redirect_to_checkout' );
+    add_filter ( 'woocommerce_add_to_cart_redirect', 'yit_redirect_to_checkout' );
     add_filter ( 'wc_add_to_cart_params', 'yit_redirect_cart_to_checkout' );
 }
 
@@ -1461,20 +1472,20 @@ if ( function_exists( 'YITH_Vendors' ) ) {
 /* ***** WC 2.6 FIX ***** */
 /* ********************** */
 
-if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', WC()->version ), '2.6', '>=' ) ) {
+if ( version_compare( WC()->version, '2.6', '>=' ) ) {
 
     // add_action( 'woocommerce_share', 'yit_woocommerce_share');
 
     // My Account
     add_filter( 'woocommerce_account_menu_items' , 'yit_woocommerce_account_menu_items' );
-    
+
     // Loop
     add_filter( 'post_class', 'yit_wc_product_post_class', 30, 3 );
     add_filter( 'product_cat_class', 'yit_wc_product_product_cat_class', 30, 3 );
 
     // remove unused template
-    yit_wc_2_6_removed_unused_template() ;
-    
+    yit_wc_removed_unused_template() ;
+
 }
 if ( ! function_exists( 'yit_woocommerce_share' ) ) {
 
@@ -1494,14 +1505,27 @@ if ( ! function_exists( 'yit_woocommerce_share' ) ) {
 /**
  * @author Andre Frascaspata
  */
-function yit_wc_2_6_removed_unused_template () {
+function yit_wc_removed_unused_template () {
 
     if( function_exists( 'yit_remove_unused_template' ) ) {
 
-        $option = 'yit_wc_2_6_template_remove';
+        $option = 'yit_wc_3_0_3_template_remove';
 
         $files = array(
+            'cart/cross-sells.php',
+            'single-product/add-to-cart/simple.php',
+            'single-product/add-to-cart/grouped.php',
+            'single-product/add-to-cart/variable.php',
+            'single-product/meta.php',
+            'single-product/price.php',
+            'single-product/product-attributes.php',
+            'single-product/product-image.php',
+            'single-product/product-image-magnifier.php',
+            'single-product/product-thumbnails.php',
+            'single-product/product-thumbnails-magnifier.php',
+            'single-product/related.php',
             'single-product/review.php',
+            'single-product/up-sells.php',
             'myaccount/form-edit-address.php',
             'myaccount/form-login.php',
             'myaccount/my-account.php',
@@ -1614,7 +1638,7 @@ if ( ! function_exists( 'yit_wc_product_post_class' ) ) {
         return $classes;
 
     }
-    
+
 }
 
 if ( ! function_exists( 'yit_wc_product_product_cat_class' ) ) {
@@ -1670,3 +1694,87 @@ if ( ! function_exists( 'yit_wc_product_product_cat_class' ) ) {
 /* ********************** */
 /* ***** END WC 2.6 ***** */
 /* ********************** */
+
+
+/***************************
+ *    START WC 3.0
+ ***************************/
+if ( version_compare( WC()->version, '3.0', '>=' ) ) {
+    if( !function_exists('yit_woocommerce_output_related_products_args') ){
+
+        add_filter('woocommerce_output_related_products_args','yit_woocommerce_output_related_products_args');
+        
+        function yit_woocommerce_output_related_products_args( $args ){
+            $args['posts_per_page'] = yit_get_option('shop-number-related');
+            return $args;
+        }
+    }
+
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+
+    if( ! function_exists('yit_set_action_for_single_product_page') ) {
+        add_action('woocommerce_before_single_product','yit_set_action_for_single_product_page',5);
+        function yit_set_action_for_single_product_page(){
+            global $product;
+
+            if( yit_get_option('shop-detail-add-to-cart') && yit_get_option('shop-detail-show-price')  ){
+                if( ! $product->is_type('grouped')){
+                    add_action('woocommerce_after_add_to_cart_quantity','woocommerce_template_single_price');
+                }
+                add_action('woocommerce_after_add_to_cart_quantity','yit_print_border_line',5);
+            }elseif( !yit_get_option('shop-detail-add-to-cart') ){
+                remove_action('woocommerce_single_product_summary','woocommerce_template_single_add_to_cart',30);
+                if( yit_get_option('shop-detail-show-price') ){
+                    add_action('woocommerce_single_product_summary','woocommerce_template_single_price',25);
+                }
+            }
+
+            if( !function_exists('yit_custom_woocommerce_reset_variations_link') ){
+                function yit_custom_woocommerce_reset_variations_link( $link ){
+                    $link = '<a class="reset_variations" href="#">' . esc_html__( 'Clear selection', 'yit' );
+                    return $link;
+                }
+            }
+            add_filter('woocommerce_reset_variations_link','yit_custom_woocommerce_reset_variations_link',15);
+        }
+    }
+    // add action using woocommerce_before_single_product hook instead of wp
+    remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+
+    if( !function_exists( 'yit_custom_template_loop_product_title' ) ){
+        add_action( 'woocommerce_shop_loop_item_title', 'yit_custom_template_loop_product_title', 10 );
+        function yit_custom_template_loop_product_title(){
+            echo '<h3 class="woocommerce-loop-product__title">' . get_the_title() . '</h3>';
+        }
+    }
+
+
+
+    function yit_print_border_line(){
+        echo '<hr>';
+    }
+
+    if( !function_exists('yit_woocommerce_cross_sells_total') ){
+        add_filter('woocommerce_cross_sells_total','yit_woocommerce_cross_sells_total');
+
+        function yit_woocommerce_cross_sells_total(){
+            return 2;
+        }
+    }
+
+    add_filter('woocommerce_checkout_fields','yit_woocommerce_default_address_fields');
+
+    function yit_woocommerce_default_address_fields($fields ){
+        $fields['billing']['billing_city']['class'] = array('form-row-wide','address-field');
+        return $fields;
+    }
+
+    if ( defined( 'YITH_WCQV' ) && function_exists('YITH_WCQV_Frontend') ) {
+        remove_action( 'woocommerce_after_shop_loop_item', array( YITH_WCQV_Frontend(), 'yith_add_quick_view_button' ), 15 );
+        add_action( 'woocommerce_after_shop_loop_item_title', array( YITH_WCQV_Frontend(), 'yith_add_quick_view_button' ), 20 );
+    }
+
+}
+

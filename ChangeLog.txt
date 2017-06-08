@@ -1,3 +1,115 @@
+---------- VER 1.6.1 - May 31, 2017 ----------
+New: support to WooCommerce 3.0.7
+New: support to WordPress 4.7.5
+New: Slider Revolution version 5.4.3.1
+Fix: product price is not showed in single product page
+
+
+UPDATED
+
+ChangeLog.txt
+style.css
+boemia-child/style.css
+languages/*.*
+theme/templates/sliders/revolution-slider/config.php
+theme/woocommerce.php
+woocommerce/cart/cart.php
+
+
+
+
+---------- VER 1.6.0 - Apr 19, 2017 ----------
+New: support to WooCommerce 3.0.3
+New: support to WordPress 4.7.3
+New: Slider Revolution version 5.4.1
+
+
+
+UPDATED
+
+style.css
+boemia-child/*.*
+cache/index.php
+core/functions-template.php
+core/templates/shortcodes/logged_user.php
+core/yit/Config.php
+languages/yit.pot
+theme/tr.php
+theme/woocommerce.php
+theme/assetes/js/woocommerce.js
+theme/templates/shortcodes/products_slider.php
+theme/templates/shortcodes/show_products.php
+theme/templates/shortcodes/yit_add_to_cart.php
+woocommerce_2.6.x/*.*
+woocommerce/content-product.php
+woocommerce/content-single-product.php
+woocommerce/single-product-reviews.php
+woocommerce/cart/cart.php
+woocommerce/cart/mini-cart.php
+woocommerce/checkout/form-billing.php
+woocommerce/checkout/form-shipping.php
+woocommerce/checkout/thankyou.php
+woocommerce/loop/add-to-cart.php
+woocommerce/loop/sale-flash.php
+woocommerce/my-account/my-orders.php
+woocommerce/order/order-details-customer.php
+woocommerce/single-product/meta.php
+woocommerce/single-product/product-thumbnails.php
+woocommerce/single-product/related.php
+woocommerce/single-product/sale-flash.php
+woocommerce/single-product/up-sells.php
+woocommerce/single-product/add-to-cart/grouped.php
+woocommerce/single-product/add-to-cart/simple.php
+woocommerce/single-product/tabs/attributes.php
+
+
+
+
+DELETED
+woocommerce/cart/cross-sells.php
+woocommerce/single-product/meta.php
+woocommerce/single-product/product-attributes.php
+woocommerce/single-product/product-image.php
+woocommerce/single-product/product-image-magnifier.php
+woocommerce/single-product/product-thumbnails.php
+woocommerce/single-product/product-thumbnails-magnifier.php
+woocommerce/single-product/related.php
+woocommerce/single-product/up-sells.php
+woocommerce/single-product/add-to-cart/grouped.php
+woocommerce/single-product/add-to-cart/variable.php
+woocommerce/single-product/add-to-cart/variable-wccl.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------- VER 1.5.3 - Jan 23, 2017 ----------
+New: WordPress 4.7 support
+Fix: Google Fonts
+Fix: price_filter notice
+
+UPDATED
+
+core/assets/fonts/google-fonts/google_fonts.json
+core/assets/js/types.js
+core/functions-core.php
+core/plugin-fw
+core/yit/Font.php
+theme/templates/shortcodes/products_categories.php
+theme/templates/shortcodes/products_categories_slider.php
+theme/templates/shortcodes/sitemap.php
+theme/woocommerce.php
+woocommerce/single-product/add-to-cart/variable-wccl.php
+woocommerce_2.5.x/single-product/add-to-cart/variable-wccl.php
+
 ---------- VER 1.5.2 - Jul 07, 2016 ----------
 Added: WooCommerce 2.6.x support
 

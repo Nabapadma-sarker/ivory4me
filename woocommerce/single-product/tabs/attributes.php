@@ -18,7 +18,7 @@ if ( $product->has_attributes() || ( $show_attr && $product->has_dimensions() ) 
 
 	<h2><?php echo $heading; ?></h2>
 
-	<?php $product->list_attributes(); ?>
+	<?php wc_display_product_attributes($product); ?>
 
 	<?php
 }

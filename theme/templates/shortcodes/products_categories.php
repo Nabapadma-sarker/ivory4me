@@ -20,9 +20,10 @@
   		'order'      => $order,
   		'hide_empty' => $hide_empty,
 		'include'    => $ids,
+		'taxonomy'   => 'product_cat',
 	);
 	
-  	$terms = get_terms( 'product_cat', $args );
+  	$terms = get_terms( $args );
   	
 	if ( $terms ) : ?>
 		<div class="show-category <?php echo $style ?>">

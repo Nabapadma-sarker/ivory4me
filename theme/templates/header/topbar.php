@@ -24,13 +24,7 @@ $yit_topbar = true;
 		<div class="row">
 
             <div class="span12 wrap">
-                <div class="left"><?php get_sidebar( 'topbarleft' ) ?>
-                  
-                </div>
-              <div class="left">
-                <div class="hidden-1024 visible-phone topbar-search"><?php if( yit_get_option( 'show-top-menu-search' ) ) the_widget('search_mini'); ?></div>
-              </div>
-                
+                <div class="left"><?php get_sidebar( 'topbarleft' ) ?></div>
                 <div class="right"><?php get_sidebar( 'topbarright' ) ?></div>
             </div>
 

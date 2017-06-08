@@ -13,5 +13,16 @@ jQuery(document).ready(function ($) {
 
     }
 
+    if(parseFloat(yit_woocommerce.version) >= 3.0) {
+        var flexViewport = $('.flex-viewport');
+        if( $('body').hasClass('single-product') && ( flexViewport.length != 0 ) ){
+            var wcProductGalleryWrapper = $('.product').find('.woocommerce-product-gallery__wrapper');
+            var onSaleBadge = wcProductGalleryWrapper.find('.on_sale_wrap');
+            onSaleBadge.remove();
+            flexViewport.append(onSaleBadge);
+        }
+
+    }
+
 });
 

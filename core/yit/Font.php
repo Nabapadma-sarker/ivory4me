@@ -46,14 +46,11 @@ class YIT_Font {
 	 * 
 	 */
 	public function init() {
-        add_action( 'admin_print_scripts', array( &$this, 'print_ajax_request' ), 20 );
-        add_action( 'wp_ajax_retrieve_google_fonts', array( &$this, 'retrieve_google_fonts_callback' ) );
-        add_action( 'init', array( &$this, 'load_options_font' ) );
-        
         $this->web = $this->_get_web_fonts();
         $this->google = $this->_get_google_fonts();
-        
         $theme_options_fonts = yit_get_option_by( 'type', 'typography' );
+
+        add_action( 'init', array( &$this, 'load_options_font' ) );
     }
     
     /**
@@ -64,8 +61,7 @@ class YIT_Font {
      */
     public function load_options_font() {
         $theme_options_fonts = yit_get_option_by( 'type', 'typography' );
-        $google_fonts = yit_get_google_fonts();
-        $google_fonts = array_map( 'stripslashes', ( array ) $google_fonts->items );
+        $google_fonts        = array_map( 'stripslashes', ( array ) $this->google->items );
         
         foreach( $theme_options_fonts as $option ) {
             $option_value = yit_get_option( $option['id'] );
@@ -81,44 +77,9 @@ class YIT_Font {
             }
             
             if( in_array( $family, $google_fonts ) ) {      
-                //yit_wp_enqueue_style( 600, 'font-' . sanitize_title( preg_replace( '/:(.*)?/', '', $option['std']['family'] ) ), yit_ssl_url( 'http://fonts.googleapis.com/css?family=' . $option['std']['family'] ) );
                 yit_add_google_font( $family );
             }
         }
-    }
-    
-    /**
-     * Send a request to Google and retrive a list of fonts. Then send it to an internal method
-     * which will cache json datas.
-     * 
-     * @return void
-     * @since 1.0.0
-     */
-    public function print_ajax_request() {
-        $cache = yit_get_model( 'cache' );
-        if( $cache->is_expired( 'google_fonts.json' ) ) :
-            ?>
-            <script type="text/javascript">
-            jQuery( document ).ready( function ( $ ) {
-                var fonts = null;
-                $.ajax({
-    				//url: "https://www.googleapis.com/webfonts/v1/webfonts",
-    				url: "http://niubbys.altervista.org/google_fonts.php",
-    				dataType: "jsonp",
-                    success: function( ret ) {
-                        var data = {
-                    		action: 'retrieve_google_fonts',
-                            google_fonts : ret
-                    	};
-                    
-              	        //since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-                    	$.post( ajaxurl, data, function( response ) {} );    
-                    }
-                });
-            });
-            </script>
-            <?php
-        endif;
     }
     
     /**
@@ -172,8 +133,7 @@ class YIT_Font {
      * @since 1.0.0
      */
     protected function _get_google_fonts() {
-        $cache = yit_get_model( 'cache' );
-        return json_decode( $cache->read( 'google_fonts.json' ) );
+        return json_decode( yit_get_json_google_fonts() );
     }
 }
 
@@ -205,8 +165,9 @@ if( !function_exists( 'yit_get_web_fonts' ) ) {
 
 if( !function_exists('yit_get_json_google_fonts')) {
     function yit_get_json_google_fonts() {
-        $cache = yit_get_model( 'cache' );
-        return $cache->read( 'google_fonts.json' );
+        $google_fonts   = 'google_fonts.json';
+        $file           = apply_filters( 'yit_google_fonts_json_file_path', YIT_CORE_ASSETS . "/fonts/google-fonts/{$google_fonts}" );
+        return file_exists( $file ) ? file_get_contents( $file ) : '';
     }
 }
 

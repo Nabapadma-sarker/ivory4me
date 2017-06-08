@@ -38,19 +38,11 @@ class search_mini extends WP_Widget {
             <?php echo do_shortcode( '[yith_woocommerce_ajax_search]' ) ?>
         <?php else: ?>
 
-<style>
-  .search_mini input {
-      margin-bottom: 0px;
-      height: 32px; 
-      width: initial !important;
-      border-radius: 0px;
-  }
- </style>
+
 		<form action="<?php echo home_url( '/' ); ?>" method="get" class="search_mini">
-      <?php echo woocommerce_product_search();  ?>
-			<!--<input type="text" name="s" id="product-search-field-851969839" value="<?php the_search_query(); ?>" placeholder="<?php _e( 'search for...', 'yit' ) ?>" />
+			<input type="text" name="s" id="search_mini" value="<?php the_search_query(); ?>" placeholder="<?php _e( 'search for...', 'yit' ) ?>" />
 			<input type="hidden" name="post_type" value="<?php echo $value ?>" />
-            <input type="submit" id="submit" name="submit" value="" />-->
+            <input type="submit" id="submit" name="submit" value="" />
 		</form>
        <?php endif ?>
 <?php		echo $after_widget;

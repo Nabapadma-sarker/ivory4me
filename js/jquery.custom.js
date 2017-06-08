@@ -500,7 +500,7 @@ jQuery( document ).ready( function( $ ) {
 
     var carouFredSelOptions_defaults = {
         responsive: false,
-        auto: false,
+        auto: true,
         items: 4,
         circular: true,
         infinite: true,
